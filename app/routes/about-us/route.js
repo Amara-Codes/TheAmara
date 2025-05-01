@@ -1,1 +1,1 @@
-export { AboutUs as default, meta, action } from './about-us';
+export { AboutUs as default, meta } from './about-us';
