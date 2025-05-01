@@ -55,16 +55,7 @@ export const Post = ({ children, title, date, banner, timecode }) => {
         )}
         <header className={styles.header}>
           <div className={styles.headerText}>
-            <Transition in timeout={msToNum(tokens.base.durationM)}>
-              {({ visible, nodeRef }) => (
-                <div className={styles.date} ref={nodeRef}>
-                  <Divider notchWidth="64px" notchHeight="8px" collapsed={!visible} />
-                  <Text className={styles.dateText} data-visible={visible}>
-                    {dateTime}
-                  </Text>
-                </div>
-              )}
-            </Transition>
+          
             <Heading level={2} as="h1" className={styles.title} aria-label={title}>
               {title.split(' ').map((word, index) => (
                 <span className={styles.titleWordWrapper} key={`${word}-${index}`}>
@@ -77,25 +68,19 @@ export const Post = ({ children, title, date, banner, timecode }) => {
                   </span>
                 </span>
               ))}
+  
             </Heading>
             <div className={styles.details}>
-              <RouterLink
-                to="#postContent"
-                className={styles.arrow}
-                aria-label="Scroll to post content"
-                onClick={handleScrollIndicatorClick}
-              >
-                <svg
-                  aria-hidden
-                  stroke="currentColor"
-                  width="43"
-                  height="15"
-                  viewBox="0 0 43 15"
-                >
-                  <path d="M1 1l20.5 12L42 1" strokeWidth="2" fill="none" />
-                </svg>
-              </RouterLink>
-              <div className={styles.timecode}>{timecode}</div>
+              <div className={styles.timecode}>Reading time: {timecode}</div>
+              <Transition in timeout={msToNum(tokens.base.durationM)}>
+              {({ visible, nodeRef }) => (
+                <div className={styles.date} ref={nodeRef}>
+                  <Text className={styles.dateText} data-visible={visible}>
+                    {dateTime}
+                  </Text>
+                </div>
+              )}
+            </Transition>
             </div>
           </div>
         </header>

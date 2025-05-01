@@ -77,15 +77,7 @@
   }
 
   .date {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: var(--spaceM);
-    align-items: center;
-    position: relative;
-
-    @media (--mediaTablet) {
-      gap: var(--spaceS);
-    }
+    text-align: end;
   }
 
   .dateText {
@@ -199,6 +191,10 @@
     will-change: opacity;
   }
 
+  .bannerImage img {
+    filter: opacity(.5);
+  } 
+
   .details {
     display: flex;
     align-items: center;
@@ -265,6 +261,7 @@
 
   .content {
     width: 100%;
+    margin-top: 4rem;
     align-self: center;
     opacity: 0;
     display: grid;

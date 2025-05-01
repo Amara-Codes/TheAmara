@@ -1,0 +1,11 @@
+.wrapper {
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    grid-template-rows: 1fr auto;
+    min-height: 100%;
+  
+    @media (--singleColumnWidth), (--mediaMobileLS) {
+      overflow-x: hidden;
+    }
+  }
