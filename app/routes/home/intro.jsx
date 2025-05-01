@@ -1,4 +1,3 @@
-import { DecoderText } from '~/components/decoder-text';
 import { Heading } from '~/components/heading';
 import { Section } from '~/components/section';
 import { useTheme } from '~/components/theme-provider';
@@ -69,23 +68,14 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
               </Suspense>
             )}
             <header className={styles.text}>
-              <h1 className={styles.name} data-visible={visible} id={titleId}>
-                <DecoderText text={config.name} delay={500} />
-              </h1>
+              <Heading
+                level={0}
+                as="h1"
+                className={`${styles.word.large} ${styles.hhf}`} // Combina word, large e hhf
+              >
+                Amara
+              </Heading>
               <Heading level={0} as="h2" className={styles.title}>
-                <VisuallyHidden className={styles.label}>
-                  {`${config.role} + ${introLabel}`}
-                </VisuallyHidden>
-                <span aria-hidden className={styles.row}>
-                  <span
-                    className={styles.word}
-                    data-status={status}
-                    style={cssProps({ delay: tokens.base.durationXS })}
-                  >
-                    {config.role}
-                  </span>
-                  <span className={styles.line} data-status={status} />
-                </span>
                 <div className={styles.row}>
                   {disciplines.map(item => (
                     <Transition

@@ -1,17 +1,15 @@
-import config from '~/config.json';
-
 export const navLinks = [
   {
-    label: 'Projects',
-    pathname: '/#project-1',
+    label: 'Ingredients',
+    pathname: '/ingredients',
   },
   {
-    label: 'Details',
-    pathname: '/#details',
+    label: 'Menu',
+    pathname: '/menu',
   },
   {
-    label: 'Articles',
-    pathname: '/articles',
+    label: 'About Us',
+    pathname: '/about-us',
   },
   {
     label: 'Contact',
@@ -21,18 +19,18 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    label: 'Bluesky',
-    url: `https://bsky.app/profile/${config.bluesky}`,
-    icon: 'bluesky',
+    label: 'Instagram',
+    url: 'https://www.instagram.com/the.amara.siem.reap/',
+    icon: 'instagram',
   },
   {
-    label: 'Figma',
-    url: `https://www.figma.com/${config.figma}`,
-    icon: 'figma',
+    label: 'Facebook',
+    url: 'https://web.facebook.com/profile.php?id=61575089007303',
+    icon: 'facebook',
   },
   {
-    label: 'Github',
-    url: `https://github.com/${config.github}`,
-    icon: 'github',
+    label: 'Tik Tok',
+    url: 'https://tiktok.com',
+    icon: 'tiktok',
   },
 ];

@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'Hhf'; /* Sostituisci con il nome del tuo font */
+  src: url('../../assets/fonts/hhf.ttf') format('truetype'), /* Percorso al file WOFF2 */
+       url('../../assets/fonts/hhf.otf') format('opentype');   /* Percorso al file WOFF (opzionale, per compatibilità) */
+       /* Puoi aggiungere altri formati come ttf, otf, eot se necessario */
+  font-weight: normal; /* Specifica il peso (es. normal, bold, 400, 700) */
+  font-style: normal;  /* Specifica lo stile (es. normal, italic) */
+  font-display: swap;  /* Strategia di visualizzazione del font durante il caricamento */
+}
+
 .intro {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.hhf{
+  font-family: 'Hhf' !important;
 }
 
 .text {
@@ -117,6 +131,7 @@
   color: color-mix(in lab, var(--text) 0%, transparent);
   transition: opacity 0.5s ease var(--durationM);
   isolation: isolate;
+  font-size: 2rem;
 
   &::after {
     content: '';
@@ -134,7 +149,7 @@
   }
 
   &[data-plus='true']::before {
-    content: '+';
+    content: '-';
     margin-right: 10px;
     opacity: 0.4;
   }
@@ -165,6 +180,10 @@
     position: absolute;
     top: 0;
     z-index: var(--zIndex0);
+  }
+
+  &.large {
+    font-size: initial;
   }
 }
 

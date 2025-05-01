@@ -1,15 +1,38 @@
+@font-face {
+  font-family: 'Hhf'; /* Sostituisci con il nome del tuo font */
+  src: url('../../assets/fonts/hhf.ttf') format('truetype'), /* Percorso al file WOFF2 */
+       url('../../assets/fonts/hhf.otf') format('opentype');   /* Percorso al file WOFF (opzionale, per compatibilità) */
+       /* Puoi aggiungere altri formati come ttf, otf, eot se necessario */
+  font-weight: normal; /* Specifica il peso (es. normal, bold, 400, 700) */
+  font-style: normal;  /* Specifica lo stile (es. normal, italic) */
+  font-display: swap;  /* Strategia di visualizzazione del font durante il caricamento */
+}
+
+
 @layer components {
   .monogram {
-    fill: var(--textTitle);
+    color: var(--textTitle);
     transition: fill var(--durationL) ease;
+    font-family: 'Hhf';
+    font-size: 4rem;
+    position: relative;
   }
 
+
   .highlight {
-    fill: var(--accent);
+    color: var(--accent);
     opacity: 0;
     transform: scale3d(1, 0, 1);
     transform-origin: top;
     transition: opacity 0.1s ease var(--durationM);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
 
     @media (--mediaUseMotion) {
       transition: transform var(--durationM) var(--bezierFastoutSlowin),

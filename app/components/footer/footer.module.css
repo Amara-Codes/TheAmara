@@ -7,7 +7,7 @@
     align-items: baseline;
     justify-content: center;
     width: 100vw;
-    padding: var(--space3XL) var(--spaceL);
+    padding: var(--space3XL) 0;
     z-index: var(--zIndex2);
     position: relative;
     color: var(--textLight);
