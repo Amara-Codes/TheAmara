@@ -1,3 +1,6 @@
+name = "theamara" 
+compatibility_date = "2025-04-01" 
+pages_build_output_dir = "./build/client"
 kv_namespaces = [
-  { id = "MY_KV", binding="MY_KV" }
+  { binding = "MY_KV", id = "2c37a0f223624d2d9da954657bcec017", preview_id = "2c37a0f223624d2d9da954657bcec017" }
 ]

@@ -1,9 +1,9 @@
 {
-  "name": "portfolio",
-  "homepage": "https://hamishw.com",
-  "description": "Portfolio site for Hamish Williams",
+  "name": "theamara",
+  "homepage": "https://theamara.pub",
+  "description": "Vegan and Vegetarian restaurant website",
   "repository": "https://github.com/HamishMW/portfolio.git",
-  "author": "Hamish Williams",
+  "author": "Roberto barbagallo",
   "sideEffects": false,
   "type": "module",
   "scripts": {
@@ -11,10 +11,10 @@
     "dev": "node ./scripts/dev.cjs && remix vite:dev",
     "start": "npx wrangler pages dev ./build/client",
     "postinstall": "node ./scripts/draco.cjs",
-    "deploy": "npm run build && npx wrangler pages deploy ./build/client --project-name portfolio",
+    "deploy": "npm run build && npx wrangler pages deploy ./build/client --project-name theamara",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
-    "deploy:storybook": "npx wrangler pages deploy ./storybook-static --project-name portfolio-storybook --branch main"
+    "deploy:storybook": "npx wrangler pages deploy ./storybook-static --project-name theamara-storybook --branch main"
   },
   "dependencies": {
     "@aws-sdk/client-ses": "^3.515.0",
@@ -24,7 +24,6 @@
     "@remix-run/react": "^2.7.1",
     "framer-motion": "11.0.5",
     "isbot": "^4.1.0",
-    "miniflare": "^3.20231030.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-img-size": "^1.0.1",
