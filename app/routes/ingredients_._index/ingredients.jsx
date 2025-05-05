@@ -44,7 +44,7 @@ function ArticlesPost({ slug, frontmatter, timecode, index }) {
             noPauseButton
             play={!reduceMotion ? hovered : undefined}
             src={banner}
-            placeholder={`${banner.split('.')[0]}-placeholder.jpg`}
+            placeholder={'public/static/posts/banner-placeholder.png'}
             alt=""
             role="presentation"
           />
