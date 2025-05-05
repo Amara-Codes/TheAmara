@@ -33,7 +33,7 @@ export const Post = ({ children, title, date, banner, timecode }) => {
     scrollToHash(event.currentTarget.href);
   };
 
-  const placeholder = `${banner?.split('.')[0]}-placeholder.jpg`;
+  const placeholder = '/static/posts/banner-placeholder.png';
 
   return (
     <article className={styles.post}>
